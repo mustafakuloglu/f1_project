@@ -1,1 +1,1 @@
-from PyQt5 import QtCore, QtGui, uic
+import pyQt5
