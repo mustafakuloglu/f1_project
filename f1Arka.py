@@ -5,8 +5,13 @@
 # Created by: PyQt5 UI code generator 5.7
 #
 # WARNING! All changes made in this file will be lost!
+import subprocess
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
+from main import sinif
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 import f1ArkaInfo
 
 
@@ -94,6 +99,10 @@ class Ui_MainWindow(object):
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)
         self.statusBar = QtWidgets.QStatusBar(MainWindow)
         self.statusBar.setObjectName("statusBar")
+        Tk().withdraw()  # we don't want a full GUI, so keep the root window from appearing
+        filename = askopenfilename()
+        sinifa = sinif()
+        htmlList = sinifa.getHtmlList(filename)
         self.setOrgunColoumWidth()
         self.setIkinciColoumWidth()
         self.setOgrenciColoumWidth()
@@ -101,7 +110,10 @@ class Ui_MainWindow(object):
         self.setTitles()
         self.insertRows()
         self.setItems()
+        self.fillRows(htmlList)
         MainWindow.setStatusBar(self.statusBar)
+
+        self.pushButton.clicked.connect(self.on_pushButton_clicked)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -117,46 +129,46 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "OKUYUNUZ"))
 
     def setOrgunColoumWidth(self):
-        self.orgun_ders.setColumnWidth(0, 32)
-        self.orgun_ders.setColumnWidth(2, 30)
-        self.orgun_ders.setColumnWidth(3, 30)
-        self.orgun_ders.setColumnWidth(5, 30)
-        self.orgun_ders.setColumnWidth(6, 30)
-        self.orgun_ders.setColumnWidth(8, 30)
-        self.orgun_ders.setColumnWidth(9, 30)
-        self.orgun_ders.setColumnWidth(11, 30)
-        self.orgun_ders.setColumnWidth(12, 30)
-        self.orgun_ders.setColumnWidth(14, 30)
-        self.orgun_ders.setColumnWidth(15, 30)
-        self.orgun_ders.setColumnWidth(17, 30)
-        self.orgun_ders.setColumnWidth(18, 30)
-        self.orgun_ders.setColumnWidth(1, 143)
-        self.orgun_ders.setColumnWidth(4, 143)
-        self.orgun_ders.setColumnWidth(7, 143)
-        self.orgun_ders.setColumnWidth(10, 143)
-        self.orgun_ders.setColumnWidth(13, 143)
-        self.orgun_ders.setColumnWidth(16, 143)
+        self.orgun_ders.setColumnWidth(0, 34)
+        self.orgun_ders.setColumnWidth(2, 20)
+        self.orgun_ders.setColumnWidth(3, 20)
+        self.orgun_ders.setColumnWidth(5, 20)
+        self.orgun_ders.setColumnWidth(6, 20)
+        self.orgun_ders.setColumnWidth(8, 20)
+        self.orgun_ders.setColumnWidth(9, 20)
+        self.orgun_ders.setColumnWidth(11, 20)
+        self.orgun_ders.setColumnWidth(12, 20)
+        self.orgun_ders.setColumnWidth(14, 20)
+        self.orgun_ders.setColumnWidth(15, 20)
+        self.orgun_ders.setColumnWidth(17, 20)
+        self.orgun_ders.setColumnWidth(18, 20)
+        self.orgun_ders.setColumnWidth(1, 147)
+        self.orgun_ders.setColumnWidth(4, 147)
+        self.orgun_ders.setColumnWidth(7, 147)
+        self.orgun_ders.setColumnWidth(10, 147)
+        self.orgun_ders.setColumnWidth(13, 147)
+        self.orgun_ders.setColumnWidth(16, 147)
 
     def setIkinciColoumWidth(self):
-        self.ikinci_ders.setColumnWidth(0, 32)
-        self.ikinci_ders.setColumnWidth(2, 30)
-        self.ikinci_ders.setColumnWidth(3, 30)
-        self.ikinci_ders.setColumnWidth(5, 30)
-        self.ikinci_ders.setColumnWidth(6, 30)
-        self.ikinci_ders.setColumnWidth(8, 30)
-        self.ikinci_ders.setColumnWidth(9, 30)
-        self.ikinci_ders.setColumnWidth(11, 30)
-        self.ikinci_ders.setColumnWidth(12, 30)
-        self.ikinci_ders.setColumnWidth(14, 30)
-        self.ikinci_ders.setColumnWidth(15, 30)
-        self.ikinci_ders.setColumnWidth(17, 30)
-        self.ikinci_ders.setColumnWidth(18, 30)
-        self.ikinci_ders.setColumnWidth(1, 143)
-        self.ikinci_ders.setColumnWidth(4, 143)
-        self.ikinci_ders.setColumnWidth(7, 143)
-        self.ikinci_ders.setColumnWidth(10, 143)
-        self.ikinci_ders.setColumnWidth(13, 143)
-        self.ikinci_ders.setColumnWidth(16, 143)
+        self.ikinci_ders.setColumnWidth(0, 34)
+        self.ikinci_ders.setColumnWidth(2, 20)
+        self.ikinci_ders.setColumnWidth(3, 20)
+        self.ikinci_ders.setColumnWidth(5, 20)
+        self.ikinci_ders.setColumnWidth(6, 20)
+        self.ikinci_ders.setColumnWidth(8, 20)
+        self.ikinci_ders.setColumnWidth(9, 20)
+        self.ikinci_ders.setColumnWidth(11, 20)
+        self.ikinci_ders.setColumnWidth(12, 20)
+        self.ikinci_ders.setColumnWidth(14, 20)
+        self.ikinci_ders.setColumnWidth(15, 20)
+        self.ikinci_ders.setColumnWidth(17, 20)
+        self.ikinci_ders.setColumnWidth(18, 20)
+        self.ikinci_ders.setColumnWidth(1, 147)
+        self.ikinci_ders.setColumnWidth(4, 147)
+        self.ikinci_ders.setColumnWidth(7, 147)
+        self.ikinci_ders.setColumnWidth(10, 147)
+        self.ikinci_ders.setColumnWidth(13, 147)
+        self.ikinci_ders.setColumnWidth(16, 147)
 
     def setOgrenciColoumWidth(self):
         self.ogrenci_ismi.setColumnWidth(0, 248)
@@ -164,7 +176,7 @@ class Ui_MainWindow(object):
         self.ogrenci_ismi.setColumnWidth(2, 120)
         self.ogrenci_ismi.setColumnWidth(3, 50)
         self.ogrenci_ismi.setColumnWidth(4, 120)
-        self.ogrenci_ismi.setColumnWidth(5, 70)
+        self.ogrenci_ismi.setColumnWidth(5, 6)
 
     def setSinavColoumWidth(self):
         self.sinav_tarihi.setColumnCount(6)
@@ -173,6 +185,7 @@ class Ui_MainWindow(object):
         self.sinav_tarihi.setColumnWidth(2, 160)
         self.sinav_tarihi.setColumnWidth(3, 30)
         self.sinav_tarihi.setColumnWidth(4, 50)
+        self.sinav_tarihi.setColumnWidth(5, 50)
 
     def setTitles(self):
         self.orgun_ders.setHorizontalHeaderLabels(
@@ -233,6 +246,45 @@ class Ui_MainWindow(object):
         self.ogrenci_ismi.insertRow(11)
         self.ogrenci_ismi.insertRow(12)
 
+    def fillRows(self, htmlList):
+        i = 0
+        while i < 10:
+            j = 1
+            while j < 17:
+                if j == 1:
+                    check = str(htmlList[i + 1][1])[2:-2]
+                    if check == '\\n':
+                        check = ""
+                    self.orgun_ders.setItem(i, j, QtWidgets.QTableWidgetItem(check))
+                if j == 4:
+                    check = str(htmlList[i + 1][2])[2:-2]
+                    if check == '\\n':
+                        check = ""
+                    self.orgun_ders.setItem(i, j, QtWidgets.QTableWidgetItem(check))
+                if j == 7:
+                    check = str(htmlList[i + 1][3])[2:-2]
+                    if check == '\\n':
+                        check = ""
+                    self.orgun_ders.setItem(i, j, QtWidgets.QTableWidgetItem(check))
+                if j == 10:
+                    check = str(htmlList[i + 1][4])[2:-2]
+                    if check == '\\n':
+                        check = ""
+                    self.orgun_ders.setItem(i, j, QtWidgets.QTableWidgetItem(check))
+                if j == 13:
+                    check = str(htmlList[i + 1][5])[2:-2]
+                    if check == '\\n':
+                        check = ""
+                    self.orgun_ders.setItem(i, j, QtWidgets.QTableWidgetItem(check))
+                if j == 16:
+                    check = str(htmlList[i + 1][6])[2:-2]
+                    if check == '\\n':
+                        check = ""
+                    self.orgun_ders.setItem(i, j, QtWidgets.QTableWidgetItem(check))
+                j += 1
+
+            i += 1
+
     def setItems(self):
         self.ogrenci_ismi.setItem(1, 2, QtWidgets.QTableWidgetItem('deneme'))
 
@@ -241,8 +293,8 @@ class Ui_MainWindow(object):
         self.ikinci_ders.setItem(0, 0, QtWidgets.QTableWidgetItem('[3]'))
         self.ikinci_ders.setItem(1, 0, QtWidgets.QTableWidgetItem('[4]'))
 
-    def startInfo(self):
-        self.orgun_ders.setItem(1, 2, QtWidgets.QTableWidgetItem('deneme'))
+    def on_pushButton_clicked(self):
+        subprocess.call("python f1ArkaInfo.py 0", shell=True)
 
 
 if __name__ == "__main__":
