@@ -1,5 +1,6 @@
 = F1 FORM
 
+
 == Projenin Amacı: 
     Bu projede yapılmak istenen üniversite hocalarımızın dönem başında ders programı,
   yüksek lisans öğrencileri gibi belirlenmesi gereken bilgileri içeren f1 formunu kağıt
@@ -25,7 +26,7 @@
   Bu ekranda OBS den indirilen html dosyası seçilmelidir.
   
 .Browse  
-image::https://raw.githubusercontent.com/mustafakuloglu/f1_project/master/browse.PNG?token=ALWMJRzjUVAokCcNpNSLOE4ztDlGbh72ks5YfpLywA%3D%3D[browse]
+image::https://github.com/mustafakuloglu/f1_project/blob/master/browse.PNG[browse]
   
   
   
@@ -33,7 +34,7 @@ image::https://raw.githubusercontent.com/mustafakuloglu/f1_project/master/browse
   Açılan ekranda aç butonuna basıldığında doğru dosya verilmişse Figure -2 ekrana gelir.
   
 .Main Page  
-image::https://raw.githubusercontent.com/mustafakuloglu/f1_project/master/ekran.PNG?token=ALWMJVdxxrx3msO97GHaH_355uIicpwEks5YfpMqwA%3D%3D[ekran]
+image::https://github.com/mustafakuloglu/f1_project/blob/master/ekran.PNG[width="1300", height="500"]
   
   
   
@@ -42,15 +43,14 @@ image::https://raw.githubusercontent.com/mustafakuloglu/f1_project/master/ekran.
   Figure -3 teki tablo örgün öğretim ders programını göstermektedir. 
   
 .Örgun  
-image::https://github.com/mustafakuloglu/f1_project/blob/master/1_ekran.PNG[ekran1]
-  
+image::https://github.com/mustafakuloglu/f1_project/blob/master/1_ekran.PNG[width="1350", height="200"]
   
   
   
   Figure -4 teki tablo 2. öğretim ders programını belirtmektedir.
   
 .İkinci  
-image::https://raw.githubusercontent.com/mustafakuloglu/f1_project/master/2_ekran.PNG?token=ALWMJfUXW5V9lN0DYNin8aVIHaRZLZuBks5YfpPywA%3D%3D[ekran2]
+image::https://github.com/mustafakuloglu/f1_project/blob/master/2_ekran.PNG[ekran2]
   
   
   
@@ -90,12 +90,12 @@ image::https://github.com/mustafakuloglu/f1_project/blob/master/sunny.PNG[sunny]
   Orjinal F1 form Figure -9 ve Figure -10 da belirtilmiştir.
   
 .f1 arka
-image::https://github.com/mustafakuloglu/f1_project/blob/master/f1Arka.PNG[f1Arka]
+image::https://github.com/mustafakuloglu/f1_project/blob/master/f1Arka.PNG[width="1366", height="768"]
 
 
 
 .f1 ön
-image::https://github.com/mustafakuloglu/f1_project/blob/master/f1On.PNG[f1On]
+image::https://github.com/mustafakuloglu/f1_project/blob/master/f1On.PNG[width="1366", height="768"]
 
 
 
